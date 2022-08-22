@@ -56,10 +56,10 @@
                             <div class="card border  bg-body text-center">
                                 <img src="./images/player/player-1.png" class="img-fluid w-100 h-100" alt="...">
                                 <div class="card-body" style="background-color: black;">
-                                    <h1 class="card-title fs-2 fw-bold text-white">Lionel Messi
+                                    <h1 class="card-title fs-2 fw-bold text-white players">Lionel Messi
                                     </h1>
                                     <p class="card-subtitle mb-2 fs-5 text-white"> 36 Goals &nbsp;. 120 Assist</p>
-                                    <button type="button"
+                                    <button type="button" id="button" onclick="addList(this)"
                                         class="btn btn-primary fs-5 border-0 px-5 py-2   mt-3  text-white ms-auto me-auto fw-bold">SELECT</button>
                                 </div>
                             </div>
@@ -68,10 +68,10 @@
                             <div class="card border bg-body  text-center">
                                 <img src="./images/player/player-2.png" class="img-fluid w-100 h-100" alt="...">
                                 <div class="card-body" style="background-color: black;">
-                                    <h1 class="card-title fs-2 fw-bold text-white">Neymar Jr
+                                    <h1 class="card-title fs-2 fw-bold text-white players">Neymar Jr
                                     </h1>
                                     <p class="card-subtitle mb-2 fs-5 text-white"> 36 Goals &nbsp;. 120 Assist</p>
-                                    <button type="button"
+                                    <button type="button" id="button" onclick="addList(this)"
                                         class="btn btn-primary fs-5 border-0 px-5 py-2   mt-3  text-white ms-auto me-auto fw-bold">SELECT</button>
                                 </div>
                             </div>
@@ -80,19 +80,33 @@
                             <div class="card border bg-body  text-center">
                                 <img src="./images/player/player-3.png" class="img-fluid w-100 h-100" alt="...">
                                 <div class="card-body" style="background-color: black;">
-                                    <h1 class="card-title fs-2 fw-bold text-white">Kylian Mbappé
+                                    <h1 class="card-title fs-2 fw-bold text-white players">Kylian Mbappé
 
                                     </h1>
                                     <p class="card-subtitle mb-2 fs-5 text-white"> 36 Goals &nbsp;. 120 Assist</p>
-                                    <button type="button"
+                                    <button type="button" id="button" onclick="addList(this)"
                                         class="btn btn-primary fs-5 border-0 px-5 py-2   mt-3  text-white ms-auto me-auto fw-bold">SELECT</button>
                                 </div>
                             </div>
                         </div>
                         <div class="col">
+                            <p class="text-4xl text-center d-none">Total added Products <span id="total-players"
+                                    class="text-blue-500">0</span>
+                            </p>
                             <div class="card border bg-body  text-center">
                                 <div class="card-body my-2">
-                                    <h1 class="card-title fs-4 fw-bold text-black">Selected - V
+                                    <!-- <h1 class="card-title fs-4 fw-bold text-black">Selected - V -->
+                                    <table class="table">
+                                        <!-- head -->
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>Selected Top-V Player</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="playerList">
+                                        </tbody>
+                                    </table>
                                     </h1>
                                 </div>
                             </div>
@@ -101,10 +115,10 @@
                             <div class="card border bg-body  text-center">
                                 <img src="./images/player/player-4.png" class="img-fluid w-100 h-100" alt="...">
                                 <div class="card-body" style="background-color: black;">
-                                    <h1 class="card-title fs-2 fw-bold text-white">Vítor Machado
+                                    <h1 class="card-title fs-2 fw-bold text-white players">Vítor Machado
                                     </h1>
                                     <p class="card-subtitle mb-2 fs-5 text-white"> 36 Goals &nbsp;. 120 Assist</p>
-                                    <button type="button"
+                                    <button type="button" id="button" onclick="addList(this)"
                                         class="btn btn-primary fs-5 border-0 px-5 py-2   mt-3  text-white ms-auto me-auto fw-bold">SELECT</button>
                                 </div>
                             </div>
@@ -113,10 +127,10 @@
                             <div class="card border bg-body  text-center">
                                 <img src="./images/player/player-5.png" class="img-fluid w-100 h-100" alt="...">
                                 <div class="card-body" style="background-color: black;">
-                                    <h1 class="card-title fs-2 fw-bold text-white">Sergio Ramos
+                                    <h1 class="card-title fs-2 fw-bold text-white players">Sergio Ramos
                                     </h1>
                                     <p class="card-subtitle mb-2 fs-5 text-white"> 36 Goals &nbsp;. 120 Assist</p>
-                                    <button type="button"
+                                    <button type="button" id="button" onclick="addList(this)"
                                         class="btn btn-primary fs-5 border-0 px-5 py-2   mt-3  text-white ms-auto me-auto fw-bold">SELECT</button>
                                 </div>
                             </div>
@@ -125,10 +139,10 @@
                             <div class="card border bg-body  text-center">
                                 <img src="./images/player/player-6.png" class="img-fluid w-100 h-100" alt="...">
                                 <div class="card-body" style="background-color: black;">
-                                    <h1 class="card-title fs-2 fw-bold text-white">Renato Sanches
+                                    <h1 class="card-title fs-2 fw-bold text-white players">Renato Sanches
                                     </h1>
                                     <p class="card-subtitle mb-2 fs-5 text-white"> 36 Goals &nbsp;. 120 Assist</p>
-                                    <button type="button"
+                                    <button type="button" id="button" onclick="addList(this)"
                                         class="btn btn-primary fs-5 border-0 px-5 py-2   mt-3  text-white ms-auto me-auto fw-bold">SELECT</button>
                                 </div>
                             </div>
@@ -161,8 +175,7 @@
     </section>
     <!-- footer-section-ends -->
 
-
-    <script src="js/app.js"></script>
+    <script src="js/addlist.js"></script>
 </body>
 
 </html>
