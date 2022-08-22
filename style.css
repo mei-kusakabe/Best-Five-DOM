@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.top-banner {
+    background-color: black;
+}
+
+.player-part {
+    background-color: black;
+}
+
+.footer-sec {
+    background-color: black;
+}
+
+.banner-heading {
+    color: #FF5E19;
+    font-family: Berkshire Swash;
+    font-size: medium;
+
+}
