@@ -91,7 +91,7 @@ document.getElementById("button3").addEventListener('click', function () {
     const coach_CostField = document.getElementById('coachCost');
     coach_Cost_string = coach_CostField.value;
     const coach_Cost = parseInt(coach_Cost_string);
-    console.log(coach_Cost);
+    // console.log(coach_Cost);
 
     totalCost = totalPlayerCost + manager_Cost + coach_Cost;
     // console.log(totalCost);
