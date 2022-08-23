@@ -10,17 +10,11 @@
 .tbl,
 .budget {
     background-color: black !important;
-}
 
-/* 
-.table>tbody>tr>td,
-.table>tbody>tr>th {
-    border-top: none;
-} */
+}
 
 .banner-heading {
     color: #FF5E19;
     font-family: Berkshire Swash;
     font-size: medium;
-
 }

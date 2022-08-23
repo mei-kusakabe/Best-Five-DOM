@@ -1,6 +1,6 @@
 const list = [];
 
-// players-cart
+// display Player List
 function displayPlayers() {
 
     const totalPlayers = document.getElementById("total-players");
@@ -11,10 +11,16 @@ function displayPlayers() {
 
     for (let i = 0; i < list.length; i++) {
 
-        const tr = document.createElement("tr");
+        // const tr = document.createElement("tr");
+        // tr.innerHTML = `
+        // <th class="text-white text-center">${i + 1}</th>
+        // <td class="text-white text-center" >${list[i].pLName}</td>
+        // `;
+        // listContainer.appendChild(tr);
+
+        const tr = document.createElement("p");
         tr.innerHTML = `
-        <th class="text-white text-center">${i + 1}</th>
-        <td class="text-white text-center" >${list[i].pLName}</td>
+        <p class="text-white text-center"> &nbsp;${i + 1}. <span class="text-white text-center" >${list[i].pLName}</span></p>
         `;
         listContainer.appendChild(tr);
     }
@@ -37,12 +43,14 @@ function addList(element) {
     }
     displayPlayers();
 
-    element.style.color = "gray";
-
+    element.style.backgroundColor = '#808080';
+    element.style.color = 'white';
     element.disabled = true;
 
 }
 let totalPlayerCost = 0;
+
+// display Player Expenses
 function playerExp(element) {
 
     const tp = document.getElementById('total-players');
@@ -58,6 +66,7 @@ function playerExp(element) {
 
 }
 
+// display total Expenses
 document.getElementById("button3").addEventListener('click', function () {
     totalCost = totalPlayerCost + 2000 + 3000;
     console.log(totalCost);
