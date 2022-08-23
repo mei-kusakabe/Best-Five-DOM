@@ -7,7 +7,7 @@
 .top-banner,
 .player-part,
 .footer-sec,
-.tbl,
+.list,
 .budget {
     background-color: black !important;
 
@@ -15,8 +15,8 @@
 
 .banner-heading {
     color: #FF5E19;
-    /* font-family: Berkshire Swash;
-    font-size: medium; */
+    font-family: 'Berkshire Swash';
+    font-style: regular;
 }
 
 .heading_underlined {
