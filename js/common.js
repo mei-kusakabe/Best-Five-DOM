@@ -1,5 +1,5 @@
 const list = [];
-
+let totalPlayerCost = 0, cnt = 0, totalCost = 0;
 // display Player List
 function displayPlayers() {
 
@@ -23,9 +23,13 @@ function displayPlayers() {
         <p class="text-white text-center"> &nbsp;${i + 1}. <span class="text-white text-center" >${list[i].pLName}</span></p>
         `;
         listContainer.appendChild(tr);
+
+        //Player-Expense Calculate
+        const tp = document.getElementById('total-players');
+        totalPlayerCost = tp.innerText * 1000;
     }
 }
-cnt = 0;
+
 function addList(element) {
     cnt++;
 
@@ -48,24 +52,22 @@ function addList(element) {
     element.disabled = true;
 
 }
-let totalPlayerCost = 0;
 
 // display Player Expenses
 function playerExp(element) {
 
-    const tp = document.getElementById('total-players');
-    totalPlayerCost = tp.innerText * 1000;
-    console.log(totalPlayerCost);
+    // const tp = document.getElementById('total-players');
+    // totalPlayerCost = tp.innerText * 1000;
+    // console.log(totalPlayerCost);
 
     const tpCost = document.getElementById('playerExp');
     tpCost.textContent = '';
 
     const tr1 = document.createElement("span");
-    tr1.innerHTML = `<span class="text-white text-center fw-bold" style="border: hidden;">$${totalPlayerCost}</span>`;
+    tr1.innerHTML = `<span class="text-white text-center fw-bold">$${totalPlayerCost}</span>`;
     tpCost.appendChild(tr1);
 
 }
-
 // display total Expenses
 document.getElementById("button3").addEventListener('click', function () {
     totalCost = totalPlayerCost + 2000 + 3000;
