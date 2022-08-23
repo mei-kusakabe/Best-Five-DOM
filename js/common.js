@@ -1,5 +1,7 @@
 const list = [];
 let totalPlayerCost = 0, cnt = 0, totalCost = 0;
+
+
 // display Player List
 function displayPlayers() {
 
@@ -25,8 +27,8 @@ function displayPlayers() {
         listContainer.appendChild(tr);
 
         //Player-Expense Calculate
-        const tp = document.getElementById('total-players');
-        totalPlayerCost = tp.innerText * 1000;
+        // const tp = document.getElementById('total-players');
+        // totalPlayerCost = tp.innerText * pcost;
     }
 }
 
@@ -56,6 +58,16 @@ function addList(element) {
 // display Player Expenses
 function playerExp(element) {
 
+    const pcostField = document.getElementById('playerCost');
+    const pcost = pcostField.value;
+    console.log(pcost);
+
+    pcostField.value = "";
+
+    const tp = document.getElementById('total-players');
+    const totalPlayerCost_string = tp.innerText * pcost;
+    totalPlayerCost = parseInt(totalPlayerCost_string);
+
     // const tp = document.getElementById('total-players');
     // totalPlayerCost = tp.innerText * 1000;
     // console.log(totalPlayerCost);
@@ -70,8 +82,23 @@ function playerExp(element) {
 }
 // display total Expenses
 document.getElementById("button3").addEventListener('click', function () {
-    totalCost = totalPlayerCost + 2000 + 3000;
+
+    const manager_CostField = document.getElementById('managerCost');
+    const manager_Cost_string = manager_CostField.value;
+    const manager_Cost = parseInt(manager_Cost_string);
+    console.log(manager_Cost);
+
+    const coach_CostField = document.getElementById('coachCost');
+    coach_Cost_string = coach_CostField.value;
+    const coach_Cost = parseInt(coach_Cost_string);
+    console.log(coach_Cost);
+
+    totalCost = totalPlayerCost + manager_Cost + coach_Cost;
     console.log(totalCost);
+
+    manager_CostField.value = "";
+    coach_CostField.value = "";
+
 
     const tCost = document.getElementById('totalExp');
     tCost.textContent = '';
