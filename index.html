@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Player Hunt</title>
-    <link
+    <!-- <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500&family=Ubuntu:wght@500&display=swap"
-        rel="stylesheet">
+        rel="stylesheet"> -->
     <!-- custom-css-stylesheet -->
     <link rel="stylesheet" href="style.css">
     <!-- bootstrap-css-stylesheet -->
@@ -27,9 +27,12 @@
                     <img src="images/banner/banner-img-1.png" class="img-fluid w-100 h-100" alt="">
                 </div>
                 <div class="m-5 p-5">
-                    <h1 class="banner-heading text-center display-5 fw-bold mb-3">Select Top-notch Player of the World!!
+                    <h1 class="banner-heading text-center display-5 fw-bold mb-3 "
+                        style="font-family: 'Berkshire Swash'; font-style: regular;">Choose five of the
+                        World's <span class="heading_underlined">Top Players!</span>
                     </h1>
-                    <p class="fs-5 text-white">We don’t want our players to be monks. We want them to be better football
+                    <p class="fs-5 text-white" style="font-style: cursive;">We don’t want our players to be monks. We
+                        want them to be better football
                         players because a monk does not play football at this level.” – Bobby Robson</p>
                 </div>
                 <div class="my-3">
@@ -91,7 +94,7 @@
                         </div>
 
                         <!-- player list -->
-                        <div class="col  tbl">
+                        <div class="col tbl">
                             <p class="text-4xl text-center d-none">Total added Players <span id="total-players"
                                     class="text-blue-500">0</span>
                             </p>
@@ -99,7 +102,7 @@
                                 <div class="card-body my-2">
                                     <!-- <h1 class="card-title fs-4 fw-bold text-black">Selected - V -->
 
-                                    <p class="text-white fs-3 fw-bold">Select- V </p>
+                                    <p class="text-white fs-3 fw-bold underlined">Select- V </p>
                                     <span id="playerList" class="text-center fs-5">
                                     </span>
                                     <br><br>
@@ -163,9 +166,9 @@
                         <div class="col">
                             <div class="card border budget">
                                 <div class="card-body my-2">
-                                    <h1 class="card-title fs-4 fw-bold text-white text-center"> Budget
+                                    <h1 class="card-title fs-4 mb-2 fw-bold text-white text-center underlined"> Budget
                                     </h1><br>
-                                    <form class="px-5 py-2">
+                                    <form class="mt-3">
 
                                         <span class="text-white">Per Player<span><input type="text" id="playerCost"
                                                     placeholder="1000" name="playerCost"></span></span>

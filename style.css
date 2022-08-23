@@ -15,6 +15,18 @@
 
 .banner-heading {
     color: #FF5E19;
-    font-family: Berkshire Swash;
-    font-size: medium;
+    /* font-family: Berkshire Swash;
+    font-size: medium; */
+}
+
+.heading_underlined {
+    background: url(images/Line\ Marker.png) bottom left no-repeat;
+    background-size: 100% 12px;
+    padding-bottom: 8px;
+}
+
+.underlined {
+    background: url(images/Ureg-Ureg\ Marker.png) bottom left no-repeat;
+    background-size: 85% 8px;
+    padding-bottom: 8px;
 }
