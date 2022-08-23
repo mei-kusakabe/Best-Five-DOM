@@ -60,7 +60,7 @@ function playerExp(element) {
 
     const pcostField = document.getElementById('playerCost');
     const pcost = pcostField.value;
-    console.log(pcost);
+    // console.log(pcost);
 
     pcostField.value = "";
 
@@ -86,7 +86,7 @@ document.getElementById("button3").addEventListener('click', function () {
     const manager_CostField = document.getElementById('managerCost');
     const manager_Cost_string = manager_CostField.value;
     const manager_Cost = parseInt(manager_Cost_string);
-    console.log(manager_Cost);
+    // console.log(manager_Cost);
 
     const coach_CostField = document.getElementById('coachCost');
     coach_Cost_string = coach_CostField.value;
@@ -94,7 +94,7 @@ document.getElementById("button3").addEventListener('click', function () {
     console.log(coach_Cost);
 
     totalCost = totalPlayerCost + manager_Cost + coach_Cost;
-    console.log(totalCost);
+    // console.log(totalCost);
 
     manager_CostField.value = "";
     coach_CostField.value = "";
