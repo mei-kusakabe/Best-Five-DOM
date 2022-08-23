@@ -4,17 +4,19 @@
 
 }
 
-.top-banner {
-    background-color: black;
+.top-banner,
+.player-part,
+.footer-sec,
+.tbl,
+.budget {
+    background-color: black !important;
 }
 
-.player-part {
-    background-color: black;
-}
-
-.footer-sec {
-    background-color: black;
-}
+/* 
+.table>tbody>tr>td,
+.table>tbody>tr>th {
+    border-top: none;
+} */
 
 .banner-heading {
     color: #FF5E19;

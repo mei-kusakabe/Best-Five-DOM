@@ -1,21 +1,22 @@
 const list = [];
-// products-cart
 
-function displayProduct() {
-    // let totalPrice = 0;
+// players-cart
+function displayPlayers() {
+
     const totalPlayers = document.getElementById("total-players");
     totalPlayers.innerText = list.length;
 
-    const cartContainer = document.getElementById("playerList");
-    cartContainer.textContent = '';
+    const listContainer = document.getElementById("playerList");
+    listContainer.textContent = '';
 
     for (let i = 0; i < list.length; i++) {
+
         const tr = document.createElement("tr");
         tr.innerHTML = `
-        <th>${i + 1}</th>
-        <td>${list[i].pLName}</td>
+        <th class="text-white text-center">${i + 1}</th>
+        <td class="text-white text-center" >${list[i].pLName}</td>
         `;
-        cartContainer.appendChild(tr);
+        listContainer.appendChild(tr);
     }
 }
 cnt = 0;
@@ -26,7 +27,6 @@ function addList(element) {
         alert('you can not buy more than 5 players!');
         return;
     }
-    // console.log(element.parentNode.children[0].innerText);
     const pLName = element.parentNode.children[0].innerText;
 
     const pL = {
@@ -35,8 +35,40 @@ function addList(element) {
     if (list.length < 5) {
         list.push(pL);
     }
+    displayPlayers();
 
+    element.style.color = "gray";
 
+    element.disabled = true;
 
-    displayProduct();
 }
+let totalPlayerCost = 0;
+function playerExp(element) {
+
+    const tp = document.getElementById('total-players');
+    totalPlayerCost = tp.innerText * 1000;
+    console.log(totalPlayerCost);
+
+    const tpCost = document.getElementById('playerExp');
+    tpCost.textContent = '';
+
+    const tr1 = document.createElement("span");
+    tr1.innerHTML = `<span class="text-white text-center fw-bold" style="border: hidden;">$${totalPlayerCost}</span>`;
+    tpCost.appendChild(tr1);
+
+}
+
+document.getElementById("button3").addEventListener('click', function () {
+    totalCost = totalPlayerCost + 2000 + 3000;
+    console.log(totalCost);
+
+    const tCost = document.getElementById('totalExp');
+    tCost.textContent = '';
+
+    const tr2 = document.createElement("span");
+    tr2.innerHTML = `<span class="text-white  fw-bold">$${totalCost}</span>`;
+    tCost.appendChild(tr2);
+
+});
+
+
